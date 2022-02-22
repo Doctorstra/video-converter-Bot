@@ -28,7 +28,7 @@ spam_notice = "This bot is hosted on heroku, and hence can just run one process 
 
 JPG = "LOCAL/video_convertor.jpg"
 
-JPG0 = 'https://telegra.ph/file/d98c559b56ef884ef3bad.jpg'
+JPG0 = 'https://telegra.ph/file/b47746769d45aaa62d4b2.png'
 
 JPG2 = "LOCAL/20211215_165751.jpg"
 
