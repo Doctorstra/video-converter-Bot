@@ -8,9 +8,9 @@
         "compressor",
         "bot"
     ],
-    "repository": "https://github.com/vasusen-code/VideoConvertor",
+    "repository": "https://github.com/Doctorstra/video-converter",
     "website": "",
-    "success_url": "https://t.me/DroneBots",
+    "success_url": "https://t.me/Dads_links_bot",
     "env": {
         "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
