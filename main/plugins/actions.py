@@ -1,5 +1,5 @@
-#tg:chauhanMahesh/DroneBots
-#github.com/vasusen-code
+#TG:Doctorstra_1/Dads_links_bot
+#Github.com/Doctorstra
 
 import heroku3 
 from .. import Drone, AUTH_USERS, ACCESS_CHANNEL, MONGODB_URI
