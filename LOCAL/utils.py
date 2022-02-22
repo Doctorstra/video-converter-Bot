@@ -1,5 +1,5 @@
-#TG:ChauhanMahesh/DroneBots
-#Github.com/vasusen-code
+#TG:Doctorstra_1/Dads_links_bot
+#Github.com/Doctorstra
 
 import time
 import math
