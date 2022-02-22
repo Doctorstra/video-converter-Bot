@@ -465,5 +465,4 @@ async def vtrim(event):
         except Exception as e: 
             print(e)
             return await xy.edit("An error occured while waiting for the response.")
-        await trim(event, msg, st, et)#Tg:ChauhanMahesh/Dronebots
-#Github.com/vasusen-code
+        await trim(event, msg, st, et)
