@@ -1,5 +1,5 @@
-#Tg:ChauhanMahesh/DroneBots
-#Github.com/vasusen-code
+#TG:Doctorstra_1/Dads_links_bot
+#Github.com/Doctorstra
 import datetime
 import motor.motor_asyncio
 from .. import MONGODB_URI
