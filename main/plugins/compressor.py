@@ -163,4 +163,5 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     await log.delete()
     log_end_text2 = f'**{_ps} PROCESS FINISHED**\n\nTime Taken: {round((time.time()-DT)/60)} minutes\nInitial size: {i_size/1000000}mb.\nFinal size: {f_size/1000000}mb.\n\n[Bot is free now.]({SUPPORT_LINK})'
     await LOG_END(event, log_end_text2)
-
+    
+    
