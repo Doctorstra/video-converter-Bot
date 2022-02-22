@@ -18,7 +18,9 @@ help_text = """**v1.4**
 •`Convert` - change formats or extract audio of any video
 •`Rename` - rename any file, extension not required
 •`SSHOTS` - generate 10 screenshots of your video
-•`Trim` - cut your videos"""
+•`Trim` - cut your videos
+
+Made With by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻"""
 
 source_text = "**Deploy your own bot**"
 
