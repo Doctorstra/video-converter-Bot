@@ -1,4 +1,4 @@
-#ChauhanMahesh/DroneBots/COL
+#Doctorstra/Dads_links_bot/COL
 
 from telethon import TelegramClient
 from decouple import config
