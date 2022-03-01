@@ -12,11 +12,7 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-
-import os
-import time
-import subprocess
-import asyncio
+import os, time, subprocess, asyncio
 from datetime import datetime as dt
 from ethon.telefunc import fast_download
 from ethon.pyfunc import video_metadata
