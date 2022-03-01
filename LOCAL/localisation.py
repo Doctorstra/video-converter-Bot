@@ -21,7 +21,6 @@ info_text = """**About me** 😉\n\n
 🌀 TelegramBotList : @Dads_links_bot
 🚸 Powered By      : @Dads_links
 
-
 help_text = """**DADS LINKS VIDEO CONVERTER**
 💎`Encode` - encode your video into different lib format or resolution
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
