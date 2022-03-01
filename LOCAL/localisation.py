@@ -9,8 +9,7 @@ CHANNEL_LINK = "https://t.me/Dads_links"
 
 SUPPORT_LINK = "https://t.me/Dads_links_bot" 
 
-info_text = """**About me** 😉\n\n
-🤖 My Name         : @Dads_links_VIDEO_CONVERTER_bot
+info_text = """**About me** 😉\n\n🤖 My Name         : @Dads_links_VIDEO_CONVERTER_bot
 👨‍💻 Developer       : @Doctorstra_1
 📝 Language        : 𝐏𝐲𝐭𝐡𝐨𝐧𝟑
 📡 Server          : Heroku
