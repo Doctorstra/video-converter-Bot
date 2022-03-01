@@ -18,7 +18,7 @@ info_text = """**About me** 😉\n\n🤖 My Name         : @Dads_links_VIDEO_CON
 📢 CHANNEL         : @Dads_links
 🔔 Bot CHANNEL     : @Dads_links_bot
 🌀 TelegramBotList : @Dads_links_bot
-🚸 Powered By      : @Dads_links
+🚸 Powered By      : @Dads_links"""
 
 help_text = """**DADS LINKS VIDEO CONVERTER BOT 🎥**\n\n💎`Encode` - encode your video into different lib format or resolution
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
