@@ -13,8 +13,8 @@ from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[[
-                           Button.inline("Channel 📢", url="https://t.me/Dads_links"),
-                           Button.inline("Bot Channel 🤖", url="https://t.me/Dads_links_bot")],
+                           Button.url("Channel 📢", url="https://t.me/Dads_links"),
+                           Button.url("Bot Channel 🤖", url="https://t.me/Dads_links_bot")],
                            [
                            [Button.url("Developer 🙎", url="https://t.me/Doctorstra_1")],
                            [
