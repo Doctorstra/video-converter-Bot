@@ -36,7 +36,7 @@ async def menu(event):
                          Button.inline("NOTICE 📄", data="notice")],
                          [
                          Button.inline("SOURCE 🛑", data="source"),
-                         Button.inline("Settings ⚙️", data="help")],
+                         Button.inline("Settings ⚙", data="help")],
                          [
                          Button.url("DEVELOPER 🙎", url=f"{DEV}")]])
     
