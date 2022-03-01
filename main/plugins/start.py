@@ -50,7 +50,7 @@ async def source(event):
                     
 @Drone.on(events.callbackquery.CallbackQuery(data="help"))
 async def help(event):
-    await event.edit('{st}',
+    await event.edit('f{st}',
                     buttons=[[
                          Button.inline("SET THUMB 🌆", data="sett"),
                          Button.inline("DEL THUMB 🗑️", data='remt')],
