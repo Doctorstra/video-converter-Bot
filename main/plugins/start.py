@@ -23,14 +23,9 @@ from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply(f'{st}', 
-                      buttons=[[
-                           Button.url("Channel 📢", url="https://t.me/Dads_links"),
-                           Button.url("Bot Channel 🤖", url="https://t.me/Dads_links_bot")],
-                          [Button.url("Developer 🙎", url="https://t.me/Doctorstra_1")]]),
-                           Button.inline("help 🤔", data="plugins")
-                           Button.inline("About 🕵️", data="info")],
-                          [Button.inline("Settings ⚙️", data="menu")]
-                          ])
+                      buttons=[
+                              [Button.inline("🔸Menu🔸", data="menu")]
+                              ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
     
@@ -40,7 +35,7 @@ async def menu(event):
     
 @Drone.on(events.callbackquery.CallbackQuery(data="info"))
 async def info(event):
-    await event.edit(f'**About me 😉 :**\n\n{info_text}\n\n⭕ @Dads_links',
+    await event.edit(f'**About me 😉 :**\n\n{info_text}\n\nMade by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻',
                     buttons=[[
                          Button.inline("🏡 Home", data="menu")]])
     
@@ -53,21 +48,21 @@ async def source(event):
     await event.edit(source_text,
                     buttons=[[
                          Button.url("Source code 🛑", url="https://t.me/Doctorstra_1"),
-                         Button.url("Repo 👁️‍🗨️", url="https://t.me/Doctorstra_1")]])
+                         Button.url("Repo 👁️‍🗨️ ", url="https://t.me/Doctorstra_1")]])
                          
                     
 @Drone.on(events.callbackquery.CallbackQuery(data="help"))
 async def help(event):
-    await event.edit(f'{st}',
+    await event.edit('f'{st}',
                     buttons=[[
                          Button.inline("SET THUMB 🌆", data="sett"),
                          Button.inline("DEL THUMB 🗑️", data='remt')],
                          [
-                         Button.inline("Help 🤔", data="plugins"),
+                         Button.inline("Help 👤", data="plugins"),
                          Button.inline("RESTART 🔄", data="restart")],
-                         [Button.url("Channel 📢", url="https://t.me/Dads_links")],
+                         [Button.url("Channel 📢", url="https://t.me/Dads_links_bot")],
                          [
-                         Button.inline("🏡 Home", data="menu")]])
+                         Button.inline("BACK 🔙", data="menu")]])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="plugins"))
 async def plugins(event):
@@ -110,4 +105,3 @@ async def res(event):
         await event.edit("An error occured!")
     elif result is True:
         await event.edit("Restarting app, wait for a minute.")
-
