@@ -12,13 +12,7 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-
-import asyncio
-import time
-import subprocess
-import re
-import os
-import ffmpeg
+import asyncio, time, subprocess, re, os, ffmpeg
 from datetime import datetime as dt
 from .. import Drone, BOT_UN, LOG_CHANNEL
 from telethon import events
@@ -74,37 +68,36 @@ async def encode(event, msg, scale=0):
     vid = ffmpeg.probe(name)
     hgt = int(vid['streams'][0]['height'])
     wdt = int(vid['streams'][0]['width'])
-    res = [hgt, wdt]
-    if scale in res:
+    if scale == hgt:
         os.rmdir("encodemedia")
         return await edit.edit(f"The video is already in {scale}p resolution.")
     if scale == 240:
-        if 426 in res:
+        if 426 == wdt:
             os.rmdir("encodemedia")
             return await edit.edit(f"The video is already in {scale}p resolution.")
     if scale == 360:
-        if 640 in res:
+        if 640 == wdt:
             os.rmdir("encodemedia")
             return await edit.edit(f"The video is already in {scale}p resolution.")
     if scale == 480:
-        if 854 in res:
+        if 854 == wdt:
             os.rmdir("encodemedia")
             return await edit.edit(f"The video is already in {scale}p resolution.")
     if scale == 720:
-        if 1280 in res:
+        if 1280 == wdt:
             os.rmdir("encodemedia")
             return await edit.edit(f"The video is already in {scale}p resolution.")
     FT = time.time()
     progress = f"progress-{FT}.txt"
     cmd = ''
     if scale == 240:
-        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -filter:v scale=-1:240 -c:v libx265 -crf 18 -c:a copy """{out}""" -y'
+        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -c:v libx264 -pix_fmt yuv420p -preset ultrafast -s 426x240 -crf 18 -c:a libopus -ac 2 -ab 128k -c:s copy """{out}""" -y'
     elif scale == 360:
-        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -filter:v scale=-1:360 -c:v libx265 -crf 22 -c:a copy """{out}""" -y'
+        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -c:v libx264 -pix_fmt yuv420p -preset ultrafast -s 640x360 -crf 20 -c:a libopus -ac 2 -ab 128k -c:s copy """{out}""" -y'
     elif scale == 480:
-        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -filter:v scale=-1:480 -c:v libx264 -crf 22 -c:a copy """{out}""" -y'
+        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -c:v libx264 -pix_fmt yuv420p -preset ultrafast -s 854x480 -crf 23 -c:a libopus -ac 2 -ab 128k -c:s copy """{out}""" -y'
     elif scale == 720:
-        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -filter:v scale=-1:720 -c:v libx264 -crf 22 -c:a copy """{out}""" -y'
+        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -c:v libx264 -pix_fmt yuv420p -preset ultrafast -s 1280x720 -crf 27 -c:a libopus -ac 2 -ab 128k -c:s copy """{out}""" -y'
     try:
         await ffmpeg_progress(cmd, name, progress, FT, edit, ps_name, log=log)
     except Exception as e:
