@@ -99,3 +99,4 @@ async def res(event):
         await event.edit("An error occured!")
     elif result is True:
         await event.edit("Restarting app, wait for a minute.")
+
