@@ -35,7 +35,7 @@ async def menu(event):
     
 @Drone.on(events.callbackquery.CallbackQuery(data="info"))
 async def info(event):
-    await event.edit(f'**About me 😉 :**\n\n{info_text}\n\nMade by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻',
+    await event.edit(f'**DADS LINKS VIDEO CONVERTER 🎥**\n\n{info_text}\n\nMade by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻',
                     buttons=[[
                          Button.inline("🏡 Home", data="menu")]])
     
