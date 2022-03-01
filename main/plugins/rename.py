@@ -12,10 +12,7 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-
-import os
-import time
-import requests
+import os, time, requests
 from datetime import datetime as dt
 from .. import Drone, BOT_UN, MONGODB_URI
 from telethon import events
