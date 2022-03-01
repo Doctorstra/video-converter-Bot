@@ -10,16 +10,25 @@ CHANNEL_LINK = "https://t.me/Dads_links"
 SUPPORT_LINK = "https://t.me/Dads_links_bot" 
 
 info_text = """**About me** 😉\n\n
-🤖 My Name         : @Dads_links_VIDEO_CONVERTER_bot
-👨‍💻 Developer       : @Doctorstra_1
-📝 Language        : 𝐏𝐲𝐭𝐡𝐨𝐧𝟑
-📡 Server          : Heroku
-📕 Library         : Pyrogram 1.0.7
-💢 Source Code     : @Doctorstra_1
-📢 CHANNEL         : @Dads_links
-🔔 Bot CHANNEL     : @Dads_links_bot
+**🤖 My Name : @Dads_links_VIDEO_CONVERTER_bot
+
+👨‍💻 Developer : @Doctorstra_1
+
+📝 Language : 𝐏𝐲𝐭𝐡𝐨𝐧𝟑
+
+📡 Server : Heroku
+
+📕 Library : Pyrogram 1.0.7
+
+💢 Source Code : @Doctorstra_1
+
+📢 CHANNEL : @Dads_links
+
+🔔 Bot CHANNEL : @Dads_links_bot
+
 🌀 TelegramBotList : @Dads_links_bot
-🚸 Powered By      : @Dads_links"""
+
+🚸 Powered By : @Dads_links**"""
 
 help_text = """**DADS LINKS VIDEO CONVERTER BOT 🎥**\n\n
 💎`Encode` - encode your video into different lib format or resolution
