@@ -12,8 +12,6 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-
-
 import time
 import os
 from datetime import datetime as dt
