@@ -39,9 +39,6 @@ async def menu(event):
                          [
                          Button.url("DEVELOPER 🙎", url=f"{DEV}")]])
     
-@Drone.on(events.callbackquery.CallbackQuery(data="menu"))
-async def menu(event):
-    await vc_menu(event)
     
 @Drone.on(events.callbackquery.CallbackQuery(data="info"))
 async def info(event):
