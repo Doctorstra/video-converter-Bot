@@ -54,7 +54,7 @@ async def compin(event):
             else:
                 await event.reply('📦',
                             buttons=[  
-                                [Button.inline("RENAME", data="rename")]])
+                                [Button.inline("RENAME 🔄", data="rename")]])
     await event.forward_to(int(ACCESS_CHANNEL))
     
 @Drone.on(events.callbackquery.CallbackQuery(data="encode"))
