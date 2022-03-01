@@ -12,7 +12,6 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-
 from .. import Drone, ACCESS_CHANNEL, AUTH_USERS
 from telethon import events, Button
 from LOCAL.localisation import START_TEXT as st
@@ -27,11 +26,11 @@ async def start(event):
                       buttons=[[
                            Button.url("Channel 📢", url="https://t.me/Dads_links"),
                            Button.url("Bot Channel 🤖", url="https://t.me/Dads_links_bot")],
-                           [Button.url("Developer 🙎", url="https://t.me/Doctorstra_1")]]),
+                          [Button.url("Developer 🙎", url="https://t.me/Doctorstra_1")]]),
                            Button.inline("help 🤔", data="plugins")
                            Button.inline("About 🕵️", data="info")],
-                           [Button.inline("Settings ⚙️", data="menu")]
-                           ])
+                          [Button.inline("Settings ⚙️", data="menu")]
+                          ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
     
