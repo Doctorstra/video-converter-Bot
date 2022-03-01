@@ -12,12 +12,7 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-import asyncio
-import time
-import subprocess
-import re
-import os
-import ffmpeg
+import asyncio, time, subprocess, re, os, ffmpeg
 from datetime import datetime as dt
 from .. import Drone, BOT_UN, LOG_CHANNEL
 from telethon import events
@@ -75,9 +70,10 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     await edit.edit("Extracting metadata...")
     vid = ffmpeg.probe(name)
     codec = vid['streams'][0]['codec_name']
-    hgt = int(vid['streams'][0]['height'])
+    hgt = video_metadata(name)["height"]
+    wdt = video_metadata(name)["width"]
     if ffmpeg_cmd == 2:
-        if hgt == 360:
+        if hgt == 360 or wdt == 640:
             await log.delete()
             await LOG_END(event, log_end_text)
             await edit.edit("Fast compress cannot be used for this media, try using HEVC!")
@@ -103,7 +99,7 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     if ffmpeg_cmd == 1:
         cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -preset ultrafast -vcodec libx265 -crf 28 -acodec copy """{out}""" -y'
     elif ffmpeg_cmd == 2:
-        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -vf scale=-1:360 -c:v libx265 -crf 22 -preset ultrafast -c:a copy """{out}""" -y'
+        cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -c:v libx265 -crf 22 -preset ultrafast -s 640x360 -c:a copy """{out}""" -y'
     elif ffmpeg_cmd == 3:
         cmd = f'ffmpeg -hide_banner -loglevel quiet -progress {progress} -i """{name}""" -preset ultrafast -vcodec libx265 -crf 18 -acodec copy """{out}""" -y'
     elif ffmpeg_cmd == 4:
@@ -175,4 +171,4 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     log_end_text2 = f'**{_ps} PROCESS FINISHED**\n\nTime Taken: {round((time.time()-DT)/60)} minutes\nInitial size: {i_size/1000000}mb.\nFinal size: {f_size/1000000}mb.\n\n[Bot is free now.]({SUPPORT_LINK})'
     await LOG_END(event, log_end_text2)
     
-    
+
