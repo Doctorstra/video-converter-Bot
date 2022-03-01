@@ -10,13 +10,16 @@ CHANNEL_LINK = "https://t.me/Dads_links"
 SUPPORT_LINK = "https://t.me/Dads_links_bot" 
 
 info_text = """**About me** 😉\n\n
-✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: DADS LINKS VIDEO CONVERTER BOT 
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/Dads_links>Dads Links</a>
-✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
-✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
-✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
-✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
-✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]""" 
+<b>🤖 My Name: <a href='https://t.me/Dads_links_VIDEO_CONVERTER_bot'> DADS LINKS VIDEO CONVERTER BOT </a></b>
+<b>👨‍💻 Developer :<a href='https://t.me/Doctorstra_1'>DOCTORSTRA</a></b>
+<b>📝 Language: 𝐏𝐲𝐭𝐡𝐨𝐧𝟑</b>
+<b>📡 Server: <a href='https://www.heroku.com'> Heroku </a></b>
+<b>📕 Library: Pyrogram 1.0.7</b>
+<b>💢 Source Code:<a href='https://t.me/Doctorstra_1'> Click Here </a></b>
+<b>📢 CHANNEL:<a href='https://t.me/Dads_links'> DADS LINKS</a></b>
+<b>🔔 Bot CHANNEL: <a href='https://t.me/Dads_links_bot'> DADS LINKS BOT</a></b>
+<b>🌀 Telegram BotList: <a href='https://t.me/Dads_links/32'> DADS LINKS BOT LIST</a></b>
+<b>🚸 Powered By: <a href='https://t.me/Dads_links'> DADS LINKS</a></b>"""
 
 help_text = """**DADS LINKS VIDEO CONVERTER**
 💎`Encode` - encode your video into different lib format or resolution
