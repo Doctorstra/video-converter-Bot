@@ -9,7 +9,8 @@ CHANNEL_LINK = "https://t.me/Dads_links"
 
 SUPPORT_LINK = "https://t.me/Dads_links_bot" 
 
-info_text = """**About me** 😉\n\n🤖 My Name         : @Dads_links_VIDEO_CONVERTER_bot
+info_text = """**About me** 😉\n\n
+🤖 My Name         : @Dads_links_VIDEO_CONVERTER_bot
 👨‍💻 Developer       : @Doctorstra_1
 📝 Language        : 𝐏𝐲𝐭𝐡𝐨𝐧𝟑
 📡 Server          : Heroku
@@ -20,7 +21,8 @@ info_text = """**About me** 😉\n\n🤖 My Name         : @Dads_links_VIDEO_CON
 🌀 TelegramBotList : @Dads_links_bot
 🚸 Powered By      : @Dads_links"""
 
-help_text = """**DADS LINKS VIDEO CONVERTER BOT 🎥**\n\n💎`Encode` - encode your video into different lib format or resolution
+help_text = """**DADS LINKS VIDEO CONVERTER BOT 🎥**\n\n
+💎`Encode` - encode your video into different lib format or resolution
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 💎`HEVC compress` - negligible loss compression
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
@@ -37,7 +39,7 @@ help_text = """**DADS LINKS VIDEO CONVERTER BOT 🎥**\n\n💎`Encode` - encode 
 
 Made With by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻"""
 
-source_text = "**Deploy your own bot**"
+source_text = "**Developer 🙎 @Doctorstra_1\n\nDeploy your Own Bot 🤖\n\n⭕ SOURCE CODE ⭕ 👇👇👇**"
 
 DEV = "https://t.me/Doctorstra_1"
 
