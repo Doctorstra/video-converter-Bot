@@ -12,10 +12,7 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-
-import os
-import subprocess
-import time
+import os, subprocess, time
 from .. import BOT_UN
 from telethon import events
 from LOCAL.localisation import SUPPORT_LINK, JPG, JPG2
