@@ -1,5 +1,17 @@
-#TG:Doctorstra_1/Dads_links_bot
-#Github.com/Doctorstra
+#  This file is part of the VIDEOconvertor distribution.
+#  Copyright (c) 2021 Doctorstra ; All rights reserved. 
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, version 3.
+#
+#  This program is distributed in the hope that it will be useful, but
+#  WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+#  General Public License for more details.
+#
+#  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
+
  
 from .. import Drone, AUTH_USERS, MONGODB_URI
 from telethon import events, Button
