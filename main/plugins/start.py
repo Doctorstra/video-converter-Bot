@@ -15,12 +15,9 @@ async def start(event):
                       buttons=[[
                            Button.url("Channel 📢", url="https://t.me/Dads_links"),
                            Button.url("Bot Channel 🤖", url="https://t.me/Dads_links_bot")],
-                           [
-                           [Button.url("Developer 🙎", url="https://t.me/Doctorstra_1")],
-                           [
+                           [Button.url("Developer 🙎", url="https://t.me/Doctorstra_1")]]),
                            Button.inline("help 🤔", data="plugins")
                            Button.inline("About 🕵️", data="info")],
-                           [
                            [Button.inline("Settings ⚙️", data="menu")]
                            ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
