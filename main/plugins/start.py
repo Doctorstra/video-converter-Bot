@@ -26,8 +26,18 @@ async def start(event):
                       buttons=[
                               [Button.inline("♻️ Menu ♻️", data="menu")]
                               ])
-    tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
-    await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
+
+@Drone.on(events.callbackquery.CallbackQuery(data="menu"))
+async def menu(event):
+    await event.edit("𝐇𝐞𝐥𝐥𝐨! 🙋‍♂️\n\n𝐈 𝐚𝐦 𝐀 𝐏𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐕𝐢𝐝𝐞𝐨 𝐜𝐨𝐧𝐯𝐞𝐫𝐭𝐞𝐫 𝐁𝐨𝐭 𝐭𝐡𝐚𝐭 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐄𝐧𝐜𝐨𝐝𝐢𝐧𝐠 | 𝐇𝐄𝐕𝐂 𝐜𝐨𝐦𝐩𝐫𝐞𝐬𝐬 | 𝐅𝐀𝐒𝐓 𝐜𝐨𝐦𝐩𝐫𝐞𝐬𝐬 | 𝐑𝐞𝐧𝐚𝐦𝐞 | 𝐒𝐒𝐇𝐎𝐓𝐒 | 𝐓𝐫𝐢𝐦 | 𝐜𝐨𝐧𝐯𝐞𝐫 𝐟𝐢𝐥𝐞 𝐭𝐨 𝐯𝐢𝐝𝐞𝐨,𝐯𝐢𝐝𝐞𝐨 𝐭𝐨 𝐟𝐢𝐥𝐞 | 𝐞𝐱𝐭𝐫𝐚𝐜𝐭 𝐯𝐢𝐝𝐞𝐨 𝐚𝐮𝐝𝐢𝐨)\n\n𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐂𝐚𝐧 𝐔𝐩𝐥𝐨𝐚𝐝 𝐕𝐢𝐝𝐞𝐨/𝐅𝐢𝐥𝐞 𝐅𝐨𝐫𝐦𝐚𝐭 𝐭𝐨 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐰𝐢𝐭𝐡 𝐀𝐝𝐝𝐞𝐝 𝐏𝐞𝐫𝐦𝐚𝐧𝐞𝐧𝐭 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐒𝐮𝐩𝐩𝐨𝐫𝐭.\n\n𝐂𝐥𝐢𝐜𝐤 /help 𝐟𝐨𝐫 𝐦𝐨𝐫𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬!\n\n𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐛𝐲 ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻.",
+                    buttons=[[
+                         Button.inline("About 🕵️", data="info"),
+                         Button.inline("NOTICE 📄", data="notice")],
+                         [
+                         Button.inline("SOURCE 🛑", data="source"),
+                         Button.inline("Help 👤", data="help")],
+                         [
+                         Button.url("DEVELOPER 🙎", url=f"{DEV}")]])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="menu"))
 async def menu(event):
