@@ -4,9 +4,6 @@
 from .. import Drone, ACCESS_CHANNEL, AUTH_USERS
 from telethon import events, Button
 from LOCAL.localisation import START_TEXT as st
-from LOCAL.localisation import ABOUT_TXT as about_text
-from LOCAL.localisation import JPG0 as file
-from LOCAL.localisation import JPG4
 from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_text, SUPPORT_LINK
 from ethon.teleutils import mention
 from ethon.mystarts import vc_menu
@@ -15,9 +12,17 @@ from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply(f'{st}', 
-                      buttons=[
-                              [Button.inline("Menu.", data="menu")]
-                              ])
+                      buttons=[[
+                           Button.inline("Channel 📢", url="https://t.me/Dads_links"),
+                           Button.inline("Bot Channel 🤖", url="https://t.me/Dads_links_bot")],
+                           [
+                           [Button.url("Developer 🙎", url="https://t.me/Doctorstra_1")],
+                           [
+                           Button.inline("help 🤔", data="plugins")
+                           Button.inline("About 🕵️", data="info")],
+                           [
+                           [Button.inline("Settings ⚙️", data="menu")]
+                           ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
     
@@ -27,9 +32,9 @@ async def menu(event):
     
 @Drone.on(events.callbackquery.CallbackQuery(data="info"))
 async def info(event):
-    await event.edit(f'**ℹ️NFO:**\n\n{info_text}',
+    await event.edit(f'**About me 😉 :**\n\n{info_text}\n\n⭕ @Dads_links',
                     buttons=[[
-                         Button.inline("Menu.", data="menu")]])
+                         Button.inline("🏡 Home", data="menu")]])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="notice"))
 async def notice(event):
@@ -39,27 +44,27 @@ async def notice(event):
 async def source(event):
     await event.edit(source_text,
                     buttons=[[
-                         Button.url("FOR PERSONAL USE", url="https://github.com/Doctorstra"),
-                         Button.url("FOR YOUR CHANNEL ", url="https://github.com/Doctorstra/")]])
+                         Button.url("Source code 🛑", url="https://t.me/Doctorstra_1"),
+                         Button.url("Repo 👁️‍🗨️", url="https://t.me/Doctorstra_1")]])
                          
                     
 @Drone.on(events.callbackquery.CallbackQuery(data="help"))
 async def help(event):
-    await event.edit('**👥HELP & SETTINGS**',
+    await event.edit('**👥HELP & SETTINGS**\n\n〽️ Powered by @Dads_links',
                     buttons=[[
-                         Button.inline("SET THUMB", data="sett"),
-                         Button.inline("REM THUMB", data='remt')],
+                         Button.inline("SET THUMB 🌆", data="sett"),
+                         Button.inline("DEL THUMB 🗑️", data='remt')],
                          [
-                         Button.inline("PLUGINS", data="plugins"),
-                         Button.inline("RESTART", data="restart")],
-                         [Button.url("SUPPORT", url=f"{SUPPORT_LINK}")],
+                         Button.inline("Help 🤔", data="plugins"),
+                         Button.inline("RESTART 🔄", data="restart")],
+                         [Button.url("Channel 📢", url="https://t.me/Dads_links")],
                          [
-                         Button.inline("BACK", data="menu")]])
+                         Button.inline("🏡 Home", data="menu")]])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="plugins"))
 async def plugins(event):
     await event.edit(f'{help_text}',
-                    buttons=[[Button.inline("Menu.", data="menu")]])
+                    buttons=[[Button.inline("🏡 Home", data="menu")]])
                    
  #-----------------------------------------------------------------------------------------------                            
     
