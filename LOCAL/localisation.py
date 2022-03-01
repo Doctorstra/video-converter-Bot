@@ -1,8 +1,7 @@
 #Don't be a thief by stealing other's Hardwork, it took time and effort to make this repo.
 #Respect my work by not making any changes here.
 
-START_TEXT = "<img src="https://telegra.ph/file/43d20b97d7d93da44788f.jpg">
-𝐇𝐞𝐥𝐥𝐨! 🙋‍♂️
+START_TEXT = "𝐇𝐞𝐥𝐥𝐨! 🙋‍♂️
 
 𝐈 𝐚𝐦 𝐀 𝐏𝐨𝐰𝐞𝐫𝐟𝐮𝐥 𝐕𝐢𝐝𝐞𝐨 𝐜𝐨𝐧𝐯𝐞𝐫𝐭𝐞𝐫 𝐁𝐨𝐭 𝐭𝐡𝐚𝐭 𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐬 𝐄𝐧𝐜𝐨𝐝𝐢𝐧𝐠 | 𝐇𝐄𝐕𝐂 𝐜𝐨𝐦𝐩𝐫𝐞𝐬𝐬 | 𝐅𝐀𝐒𝐓 𝐜𝐨𝐦𝐩𝐫𝐞𝐬𝐬 | 𝐑𝐞𝐧𝐚𝐦𝐞 | 𝐒𝐒𝐇𝐎𝐓𝐒 | 𝐓𝐫𝐢𝐦 | 𝐜𝐨𝐧𝐯𝐞𝐫 𝐟𝐢𝐥𝐞 𝐭𝐨 𝐯𝐢𝐝𝐞𝐨,𝐯𝐢𝐝𝐞𝐨 𝐭𝐨 𝐟𝐢𝐥𝐞 | 𝐞𝐱𝐭𝐫𝐚𝐜𝐭 𝐯𝐢𝐝𝐞𝐨 𝐚𝐮𝐝𝐢𝐨)
 
@@ -12,8 +11,9 @@ START_TEXT = "<img src="https://telegra.ph/file/43d20b97d7d93da44788f.jpg">
 
 𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐛𝐲 ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻."
 
-ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: DADS LINKS VIDEO CONVERTER BOT 
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/Dads_links>Team Dads Links</a>
+info_text = """**About me** 😉\n\n
+✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: DADS LINKS VIDEO CONVERTER BOT 
+✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/Dads_links>Dads Links</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
@@ -24,11 +24,9 @@ FORCE_SUB_TEXT = "In order to use this bot, you've to join my parent channel."
 
 CHANNEL_LINK = "https://t.me/Dads_links"
 
-SUPPORT_LINK = "https://t.me/Dads_links_bot"
+SUPPORT_LINK = "https://t.me/Dads_links_bot"  
 
-info_text = "This bot is developed by @Doctorstra_1\n\nWritten in python library TELETHON.\n\nBot by : @Dads_links\nSupport : @Dads_links_bot\n\nV1.4"   
-
-help_text = """**v1.4**
+help_text = """**DADS LINKS VIDEO CONVERTER**
 💎`Encode` - encode your video into different lib format or resolution
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 💎`HEVC compress` - negligible loss compression
@@ -50,7 +48,7 @@ source_text = "**Deploy your own bot**"
 
 DEV = "https://t.me/Doctorstra_1"
 
-spam_notice = "This bot is hosted on heroku, and hence can just run one process at a time.Spamming the bot or encoding adult videos will lead you to a ban."
+spam_notice = "This is a Powerful Video converter bot Made by @Dads_links.porn will be permanently ban."
 
 JPG = "LOCAL/video_convertor.jpg"
 
