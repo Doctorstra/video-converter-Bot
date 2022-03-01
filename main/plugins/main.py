@@ -12,10 +12,7 @@
 #
 #  License can be found in < https://github.com/Doctorstra/VIDEO-converter/blob/public/LICENSE> .
 
-
-import os
-import time
-import asyncio
+import os, time, asyncio
 from .. import Drone, LOG_CHANNEL, FORCESUB_UN, MONGODB_URI, ACCESS_CHANNEL
 from telethon import events, Button
 from telethon.tl.types import DocumentAttributeVideo
@@ -32,7 +29,7 @@ from main.plugins.encoder import encode
 from main.plugins.ssgen import screenshot
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = f"Hey there!To use this bot you've to join @{FORCESUB_UN}.\n\nAlso join @Dads_links_bot."
+forcesubtext = f"Hey there!To use this bot you've to join @{FORCESUB_UN}.\n\nAlso join @DroneBots."
 
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
@@ -48,14 +45,14 @@ async def compin(event):
                 return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
             video = event.file.mime_type
             if 'video' in video:
-                await event.reply("📽 Made by @Dads_links 𝗔𝗱𝗺𝗶𝗻",
+                await event.reply("📽",
                             buttons=[
-                                [Button.inline("ENCODE 📛", data="encode"),
-                                 Button.inline("COMPRESS 🗜️", data="compress")],
-                                [Button.inline("CONVERT ⏳", data="convert"),
-                                 Button.inline("RENAME 🔄", data="rename")],
-                                [Button.inline("SSHOTS 🌆", data="sshots"),
-                                 Button.inline("TRIM ✂️", data="trim")]
+                                [Button.inline("ENCODE", data="encode"),
+                                 Button.inline("COMPRESS", data="compress")],
+                                [Button.inline("CONVERT", data="convert"),
+                                 Button.inline("RENAME", data="rename")],
+                                [Button.inline("SSHOTS", data="sshots"),
+                                 Button.inline("TRIM", data="trim")]
                             ])
             elif 'png' in video:
                 return
@@ -66,7 +63,7 @@ async def compin(event):
             else:
                 await event.reply('📦',
                             buttons=[  
-                                [Button.inline("RENAME 🔄", data="rename")]])
+                                [Button.inline("RENAME", data="rename")]])
     await event.forward_to(int(ACCESS_CHANNEL))
     
 @Drone.on(events.callbackquery.CallbackQuery(data="encode"))
@@ -79,7 +76,7 @@ async def _encode(event):
                          Button.inline("720p", data="720")],
                         [Button.inline("x264", data="264"),
                          Button.inline("x265", data="265")],
-                        [Button.inline("BACK 🔙", data="back")]])
+                        [Button.inline("BACK", data="back")]])
      
 @Drone.on(events.callbackquery.CallbackQuery(data="compress"))
 async def _compress(event):
@@ -87,7 +84,7 @@ async def _compress(event):
                     buttons=[
                         [Button.inline("HEVC COMPRESS", data="hcomp"),
                          Button.inline("FAST COMPRESS", data="fcomp")],
-                        [Button.inline("BACK 🔙", data="back")]])
+                        [Button.inline("BACK", data="back")]])
 
 @Drone.on(events.callbackquery.CallbackQuery(data="convert"))
 async def convert(event):
@@ -95,25 +92,25 @@ async def convert(event):
     msg = await button.get_reply_message()  
     await event.edit("🔃**CONVERT**",
                     buttons=[
-                        [Button.inline("MP3 🔊", data="mp3"),
-                         Button.inline("FLAC 🔉", data="flac"),
-                         Button.inline("WAV 🔈", data="wav")],
-                        [Button.inline("MP4 🎥", data="mp4"),
-                         Button.inline("WEBM📽️", data="webm"),
-                         Button.inline("MKV🎞️", data="mkv")],
-                        [Button.inline("FILE 📂", data="file"),
-                         Button.inline("VIDEO 🎥", data="video")],
-                        [Button.inline("BACK 🔙", data="back")]])
+                        [Button.inline("MP3", data="mp3"),
+                         Button.inline("FLAC", data="flac"),
+                         Button.inline("WAV", data="wav")],
+                        [Button.inline("MP4", data="mp4"),
+                         Button.inline("WEBM", data="webm"),
+                         Button.inline("MKV", data="mkv")],
+                        [Button.inline("FILE", data="file"),
+                         Button.inline("VIDEO", data="video")],
+                        [Button.inline("BACK", data="back")]])
                         
 @Drone.on(events.callbackquery.CallbackQuery(data="back"))
 async def back(event):
-    await event.edit("📽 Made by @Dads_links 𝗔𝗱𝗺𝗶𝗻", buttons=[
-                    [Button.inline("ENCODE 📛", data="encode"),
-                     Button.inline("COMPRESS 🗜️", data="compress")],
-                    [Button.inline("CONVERT ⏳", data="convert"),
-                     Button.inline("RENAME 🔄", data="rename")],
-                    [Button.inline("SSHOTS 🌆", data="sshots"),
-                     Button.inline("TRIM ✂️", data="trim")]])
+    await event.edit("📽", buttons=[
+                    [Button.inline("ENCODE", data="encode"),
+                     Button.inline("COMPRESS", data="compress")],
+                    [Button.inline("CONVERT", data="convert"),
+                     Button.inline("RENAME", data="rename")],
+                    [Button.inline("SSHOTS", data="sshots"),
+                     Button.inline("TRIM", data="trim")]])
     
 #-----------------------------------------------------------------------------------------
 
@@ -125,8 +122,8 @@ async def set_timer(event, list1, list2):
     now = time.time()
     list2.append(f'{now}')
     list1.append(f'{event.sender_id}')
-    await event.client.send_message(event.chat_id, 'You can start a new process again after 2 minutes.')
-    await asyncio.sleep(120)
+    await event.client.send_message(event.chat_id, 'You can start a new process again after 5 minutes.')
+    await asyncio.sleep(300)
     list2.pop(int(timer.index(f'{now}')))
     list1.pop(int(process1.index(f'{event.sender_id}')))
     
@@ -136,7 +133,7 @@ async def check_timer(event, list1, list2):
         index = list1.index(f'{event.sender_id}')
         last = list2[int(index)]
         present = time.time()
-        return False, f"You have to wait {120-round(present-float(last))} seconds more to start a new process!"
+        return False, f"You have to wait {300-round(present-float(last))} seconds more to start a new process!"
     else:
         return True, None
     
