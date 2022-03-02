@@ -45,7 +45,7 @@ async def compin(event):
                 return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
             video = event.file.mime_type
             if 'video' in video:
-                await event.reply("📽 Made by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻",
+                sent_ = await bot.send_video(
                             buttons=[
                                 [Button.inline("ENCODE 📛", data="encode"),
                                  Button.inline("COMPRESS 🗜️", data="compress")],
@@ -104,7 +104,7 @@ async def convert(event):
                         
 @Drone.on(events.callbackquery.CallbackQuery(data="back"))
 async def back(event):
-    await event.edit("📽 Made by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻", buttons=[
+    sent_ = await bot.send_video( buttons=[
                     [Button.inline("ENCODE 📛", data="encode"),
                      Button.inline("COMPRESS 🗜️", data="compress")],
                     [Button.inline("CONVERT ⏳", data="convert"),
