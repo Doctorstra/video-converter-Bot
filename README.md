@@ -67,7 +67,7 @@ Deploy your own bot on heroku.
 `Warning` - There are two different branches available, look(above) which one you want to deploy. Go to `main` branch if you need bot for your `personal` needs.
   
 ### Deploy Now:
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Doctorstra/video-converter)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?)
 
 
 `Alternate way:`
