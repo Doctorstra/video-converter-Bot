@@ -48,9 +48,9 @@ help_text = """**DADS LINKS VIDEO CONVERTER BOT 🎥**\n\n
 
 Made With by ❤️ @Dads_links 𝗔𝗱𝗺𝗶𝗻"""
 
-source_text = "**Developer 🙎 @Doctorstra_1\n\nDeploy your Own Bot 🤖\n\n⭕ SOURCE CODE ⭕ 👇👇👇**"
+source_text = "**Developer 🙎 Doctorstra\n\nDeploy your Own Bot 🤖\n\n⭕ SOURCE CODE ⭕ 👇👇👇**"
 
-DEV = "https://t.me/Doctorstra_1"
+DEV = "https://github.com/Doctorstra"
 
 spam_notice = "This is a Powerful Video converter bot Made by @Dads_links.porn will be permanently ban."
 
